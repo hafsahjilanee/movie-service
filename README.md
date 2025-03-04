@@ -136,16 +136,17 @@ Fetch detailed information about a specific movie by its ID.
             "id": 2396
         }
     ]
-}
+
   ```
 
 ### Prerequisites
 
 - Node.js: Ensure you have Node.js installed (v16 or higher).
 - NestJS CLI: Install the NestJS CLI globally.
-  ```
+  ```bash
   npm install -g @nestjs/cli
   ```
+
 
 ## Installation
 
