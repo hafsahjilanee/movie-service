@@ -139,8 +139,6 @@ Fetch detailed information about a specific movie by its ID.
 }
   ```
 
-## Setup
-
 ### Prerequisites
 
 - Node.js: Ensure you have Node.js installed (v16 or higher).
