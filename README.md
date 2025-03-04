@@ -145,5 +145,33 @@ Fetch detailed information about a specific movie by its ID.
 - NestJS CLI: Install the NestJS CLI globally.
   ```
   npm install -g @nestjs/cli
+  ```
+
+## Installation
+
+### Clone the repository:
+```bash
+git clone https://github.com/hafsahjilanee/movie-service.git
+cd movie-service
+```
+
+### Install dependencies:
+```bash
+npm install
+```
+#### Set up environment variables:
+Create a .env file in the root directory and add the following:
+
+```bash
+MOVIES_DB_PATH=./movies.db
+RATINGS_DB_PATH=./ratings.db
+OMDB_API_KEY=
+```
+
+#### Run the application:
+```bash
+npm run start
+```
+Access the APIs at http://localhost:3000.
   
 
