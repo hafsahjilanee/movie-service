@@ -1,14 +1,48 @@
+import { IsString, IsNumber, IsArray, ValidateNested, IsOptional } from 'class-validator';
+import { Type } from 'class-transformer';
+
+class GenreDto {
+  @IsNumber()
+  id: number;
+
+  @IsString()
+  name: string;
+}
+
 export class MovieDetailsDto {
-    imdbId: string;
-    title: string;
-    description: string;
-    releaseDate: string;
-    budget: string;
-    runtime: number;
-    averageRating: string;
-    rottenTomatoes: string;
-    genres: { id: number; name: string }[];
-    originalLanguage: string;
-    productionCompanies: string[];
-  }
-  
+  @IsString()
+  imdbId: string;
+
+  @IsString()
+  title: string;
+
+  @IsString()
+  description: string;
+
+  @IsString()
+  releaseDate: string;
+
+  @IsString()
+  budget: string;
+
+  @IsNumber()
+  runtime: number;
+
+  @IsString()
+  averageRating: string;
+
+  @IsString()
+  rottenTomatoes: string;
+
+  @IsArray()
+  @ValidateNested({ each: true })
+  @Type(() => GenreDto)
+  genres: GenreDto[];
+
+  @IsString()
+  originalLanguage: string;
+
+  @IsArray()
+  @IsString({ each: true })
+  productionCompanies: string[];
+}
